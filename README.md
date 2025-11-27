@@ -11,3 +11,15 @@ lib/      -> JDBC driver (ojdbc6.jar)
 THINGS TO HAVE:
 - Since this uses the University Oracle DB, a connection to TMU must be established (VPN or WIFI).
 - To clone this project, you must install  GIT. You may do so here: git-scm.com
+
+-HOW TO RUN THE PROGRAM:
+1. OPEN TERMINAL
+2. PASTE THE FOLLOWING:
+  - git clone https://github.com/musheersid098/Job-Board-DBMS
+  - cd Job-Board-DBMS
+  - mkdir out
+  - javac -cp "lib/*" -d out src\JdbcOracleConnectionTemplate.java
+  - java -cp "out;lib/*" JdbcOracleConnectionTemplate
+3. USE TMU ORACLE DB USERNAME AND PASSWORD
+4. FOLLOW ONSCREEN STEPS
+
