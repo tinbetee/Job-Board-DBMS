@@ -1,39 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Register User</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-  <a href="dashboard.html">Dashboard</a>
-  <a href="jobs.html">Jobs</a>
-  <a href="applications.html">Applications</a>
-  <a href="users.html">Users</a>
-  <a href="reports.html">Reports</a>
-  <a href="index.html">Logout</a>
-</nav>
+<div class="app-layout">
 
-<div class="container">
-  <h1>Register New User</h1>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Career Portal</h2>
 
-  <form>
-    <label>Name</label>
-    <input type="text">
+    <div class="nav-section-title">Main</div>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="applications.html">Applications</a></li>
+    </ul>
 
-    <label>Email</label>
-    <input type="email">
+    <div class="nav-section-title">Administration</div>
+    <ul class="nav-links">
+      <li><a class="active" href="users.html">Users</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
 
-    <label>Role</label>
-    <select>
-      <option>Recruiter</option>
-      <option>HR Staff</option>
-      <option>Admin</option>
-    </select>
+    <div class="nav-section-title">Session</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Logout</a></li>
+    </ul>
+  </aside>
 
-    <button>Create User (UI Only)</button>
-  </form>
+  <!-- Main -->
+  <main class="main">
+
+    <header class="main-header">
+      <h1>Register New User</h1>
+      <div class="header-right">Create a new staff account</div>
+    </header>
+
+    <div class="form-card">
+
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email">
+        </div>
+
+        <div class="form-group">
+          <label>Role</label>
+          <select>
+            <option>Recruiter</option>
+            <option>HR Staff</option>
+            <option>Hiring Manager</option>
+            <option>Administrator</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Department</label>
+          <input type="text">
+        </div>
+
+        <button type="button" class="btn btn-primary">Create User (UI Only)</button>
+      </form>
+
+    </div>
+
+  </main>
 </div>
 
 </body>

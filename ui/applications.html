@@ -1,43 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Applications</title>
+  <meta charset="UTF-8">
+  <title>Applications - Career Portal</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-  <a href="dashboard.html">Dashboard</a>
-  <a href="jobs.html">Jobs</a>
-  <a href="applications.html">Applications</a>
-  <a href="users.html">Users</a>
-  <a href="reports.html">Reports</a>
-  <a href="index.html">Logout</a>
-</nav>
+<div class="app-layout">
 
-<div class="container">
-  <h1>Applications</h1>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Career Portal</h2>
 
-  <table>
-    <tr>
-      <th>Candidate</th>
-      <th>Job Title</th>
-      <th>Submitted</th>
-      <th>Status</th>
-    </tr>
-    <tr>
-      <td>Alex Chen</td>
-      <td>Software Developer</td>
-      <td>2024-11-15</td>
-      <td>New</td>
-    </tr>
-    <tr>
-      <td>Maria Lopez</td>
-      <td>Data Analyst</td>
-      <td>2024-11-10</td>
-      <td>Review</td>
-    </tr>
-  </table>
+    <div class="nav-section-title">Main</div>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a class="active" href="applications.html">Applications</a></li>
+    </ul>
+
+    <div class="nav-section-title">Administration</div>
+    <ul class="nav-links">
+      <li><a href="users.html">Users</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
+
+    <div class="nav-section-title">Session</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <header class="main-header">
+      <h1>Applications</h1>
+      <div class="header-right">Review applicants by job</div>
+    </header>
+
+    <!-- Filter Section -->
+    <div class="form-card">
+      <h2 style="margin-bottom:12px;">Filter Applications</h2>
+
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Job Title</label>
+            <input type="text" placeholder="e.g., Software Developer">
+          </div>
+
+          <div class="form-group">
+            <label>Status</label>
+            <select>
+              <option>Any</option>
+              <option>New</option>
+              <option>In Review</option>
+              <option>Interview</option>
+              <option>Rejected</option>
+              <option>Hired</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date From</label>
+            <input type="date">
+          </div>
+          <div class="form-group">
+            <label>Date To</label>
+            <input type="date">
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary">Apply Filters (UI Only)</button>
+      </form>
+    </div>
+
+    <!-- Applications Table -->
+    <div class="table-wrapper">
+      <h3>Recent Applications</h3>
+      <table>
+        <tr>
+          <th>Candidate</th>
+          <th>Job Title</th>
+          <th>Date Submitted</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+
+        <tr>
+          <td>Alex Chen</td>
+          <td>Software Developer</td>
+          <td>2024-11-15</td>
+          <td><span class="badge badge-success">New</span></td>
+          <td>
+            <button class="btn btn-secondary">View</button>
+            <button class="btn btn-outline">Delete</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Maria Lopez</td>
+          <td>Data Analyst</td>
+          <td>2024-11-10</td>
+          <td>In Review</td>
+          <td>
+            <button class="btn btn-secondary">View</button>
+            <button class="btn btn-outline">Delete</button>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+
+  </main>
 </div>
 
 </body>

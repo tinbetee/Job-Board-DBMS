@@ -1,31 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Dashboard</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-  <a href="dashboard.html">Dashboard</a>
-  <a href="jobs.html">Jobs</a>
-  <a href="applications.html">Applications</a>
-  <a href="users.html">Users</a>
-  <a href="reports.html">Reports</a>
-  <a href="index.html">Logout</a>
-</nav>
+<div class="app-layout">
 
-<div class="container">
-  <h1>Dashboard</h1>
-  <p>Welcome! Choose an option from the menu above.</p>
+  <aside class="sidebar">
+    <h2>Career Portal</h2>
 
-  <h2>Quick Links</h2>
-  <ul>
-    <li><a href="jobs.html">Add or View Jobs</a></li>
-    <li><a href="applications.html">View Applications</a></li>
-    <li><a href="users.html">Manage Users</a></li>
-    <li><a href="register.html">Register New User</a></li>
-  </ul>
+    <div class="nav-section-title">Main</div>
+    <ul class="nav-links">
+      <li><a class="active" href="dashboard.html">Dashboard</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="applications.html">Applications</a></li>
+    </ul>
+
+    <div class="nav-section-title">Admin</div>
+    <ul class="nav-links">
+      <li><a href="users.html">Users</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
+
+    <div class="nav-section-title">Session</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Logout</a></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+
+    <header class="main-header">
+      <h1>Dashboard</h1>
+      <div class="header-right">Logged in as Admin</div>
+    </header>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Open Job Postings</h3>
+        <p><strong>12</strong></p>
+      </div>
+
+      <div class="card">
+        <h3>New Applications</h3>
+        <p><strong>34</strong></p>
+      </div>
+
+      <div class="card">
+        <h3>Registered Users</h3>
+        <p><strong>18</strong></p>
+      </div>
+
+      <div class="card">
+        <h3>Upcoming Deadlines</h3>
+        <p><strong>3</strong></p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:25px;">Quick Actions</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Post a New Job</h3>
+        <a href="jobs.html" class="btn btn-primary" style="margin-top:8px;">Add Job</a>
+      </div>
+
+      <div class="card">
+        <h3>Review Applications</h3>
+        <a href="applications.html" class="btn btn-secondary" style="margin-top:8px;">View Applications</a>
+      </div>
+
+      <div class="card">
+        <h3>Add New User</h3>
+        <a href="register.html" class="btn btn-secondary" style="margin-top:8px;">Register User</a>
+      </div>
+    </div>
+
+  </main>
 </div>
 
 </body>

@@ -1,68 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Jobs</title>
+  <meta charset="UTF-8">
+  <title>Job Postings</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-  <a href="dashboard.html">Dashboard</a>
-  <a href="jobs.html">Jobs</a>
-  <a href="applications.html">Applications</a>
-  <a href="users.html">Users</a>
-  <a href="reports.html">Reports</a>
-  <a href="index.html">Logout</a>
-</nav>
+<div class="app-layout">
+  
+  <aside class="sidebar">
+    <h2>Career Portal</h2>
 
-<div class="container">
-  <h1>Job Postings</h1>
+    <div class="nav-section-title">Main</div>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a class="active" href="jobs.html">Jobs</a></li>
+      <li><a href="applications.html">Applications</a></li>
+    </ul>
 
-  <h2>Add Job Posting</h2>
-  <form>
-    <label>Job Title</label>
-    <input type="text">
+    <div class="nav-section-title">Admin</div>
+    <ul class="nav-links">
+      <li><a href="users.html">Users</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
 
-    <label>Company / Department</label>
-    <input type="text">
+    <ul class="nav-links">
+      <li><a href="index.html">Logout</a></li>
+    </ul>
+  </aside>
 
-    <label>Salary</label>
-    <input type="text">
+  <main class="main">
 
-    <label>Deadline</label>
-    <input type="date">
+    <header class="main-header">
+      <h1>Job Postings</h1>
+      <div class="header-right">Manage available positions</div>
+    </header>
 
-    <label>Description</label>
-    <textarea></textarea>
+    <div class="form-card">
+      <h2>Add or Edit Job</h2>
 
-    <button type="button">Save (UI Only)</button>
-  </form>
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Job Title</label>
+            <input type="text">
+          </div>
 
-  <h2>Existing Jobs</h2>
-  <table>
-    <tr>
-      <th>Job Title</th>
-      <th>Department</th>
-      <th>Salary</th>
-      <th>Deadline</th>
-      <th>Status</th>
-    </tr>
-    <tr>
-      <td>Software Developer</td>
-      <td>IT</td>
-      <td>$70,000</td>
-      <td>2025-01-31</td>
-      <td>Open</td>
-    </tr>
-    <tr>
-      <td>Data Analyst</td>
-      <td>BI</td>
-      <td>$65,000</td>
-      <td>2025-02-10</td>
-      <td>Open</td>
-    </tr>
-  </table>
+          <div class="form-group">
+            <label>Department</label>
+            <input type="text">
+          </div>
+        </div>
 
+        <div class="form-row">
+          <div class="form-group">
+            <label>Salary</label>
+            <input type="text">
+          </div>
+
+          <div class="form-group">
+            <label>Deadline</label>
+            <input type="date">
+          </div>
+        </div>
+
+        <label>Description</label>
+        <textarea></textarea>
+
+        <button class="btn btn-primary" type="button">Save (UI Only)</button>
+        <button class="btn btn-outline" type="reset">Clear</button>
+      </form>
+    </div>
+
+    <div class="table-wrapper">
+      <h3>Existing Jobs</h3>
+
+      <table>
+        <tr>
+          <th>Job</th>
+          <th>Dept</th>
+          <th>Salary</th>
+          <th>Deadline</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+
+        <tr>
+          <td>Software Developer</td>
+          <td>IT</td>
+          <td>$70,000</td>
+          <td>2025-01-31</td>
+          <td><span class="badge badge-success">Open</span></td>
+          <td>
+            <button class="btn btn-secondary">Edit</button>
+            <button class="btn btn-outline">Delete</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Data Analyst</td>
+          <td>Business Intelligence</td>
+          <td>$65,000</td>
+          <td>2025-02-10</td>
+          <td><span class="badge badge-warning">Closing</span></td>
+          <td>
+            <button class="btn btn-secondary">Edit</button>
+            <button class="btn btn-outline">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+  </main>
 </div>
 
 </body>

@@ -1,42 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Reports</title>
+  <meta charset="UTF-8">
+  <title>Reports - Career Portal</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-  <a href="dashboard.html">Dashboard</a>
-  <a href="jobs.html">Jobs</a>
-  <a href="applications.html">Applications</a>
-  <a href="users.html">Users</a>
-  <a href="reports.html">Reports</a>
-  <a href="index.html">Logout</a>
-</nav>
+<div class="app-layout">
 
-<div class="container">
-  <h1>Reports</h1>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Career Portal</h2>
 
-  <h2>Applications Per Job (Sample)</h2>
-  <table>
-    <tr>
-      <th>Job</th>
-      <th>Applications</th>
-      <th>Hires</th>
-    </tr>
-    <tr>
-      <td>Software Developer</td>
-      <td>22</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>Data Analyst</td>
-      <td>15</td>
-      <td>0</td>
-    </tr>
-  </table>
+    <div class="nav-section-title">Main</div>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="applications.html">Applications</a></li>
+    </ul>
 
+    <div class="nav-section-title">Administration</div>
+    <ul class="nav-links">
+      <li><a href="users.html">Users</a></li>
+      <li><a class="active" href="reports.html">Reports</a></li>
+    </ul>
+
+    <div class="nav-section-title">Session</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <header class="main-header">
+      <h1>Reports</h1>
+      <div class="header-right">Overview of portal activity</div>
+    </header>
+
+    <!-- Simple Cards -->
+    <div class="card-grid">
+      <div class="card">
+        <h3>Applications Per Job</h3>
+        <p>See how many candidates applied per posting.</p>
+        <button class="btn btn-secondary" style="margin-top:8px;">Generate (UI Only)</button>
+      </div>
+
+      <div class="card">
+        <h3>Time to Fill</h3>
+        <p>Average days required to hire for a role.</p>
+        <button class="btn btn-secondary" style="margin-top:8px;">Generate (UI Only)</button>
+      </div>
+
+      <div class="card">
+        <h3>User Activity</h3>
+        <p>See which recruiters are most active.</p>
+        <button class="btn btn-secondary" style="margin-top:8px;">Generate (UI Only)</button>
+      </div>
+    </div>
+
+    <!-- Sample Table -->
+    <div class="table-wrapper" style="margin-top:24px;">
+      <h3>Sample Report: Applications Per Job</h3>
+
+      <table>
+        <tr>
+          <th>Job Title</th>
+          <th>Applications</th>
+          <th>Hires</th>
+        </tr>
+
+        <tr>
+          <td>Software Developer</td>
+          <td>22</td>
+          <td>1</td>
+        </tr>
+
+        <tr>
+          <td>Data Analyst</td>
+          <td>15</td>
+          <td>0</td>
+        </tr>
+      </table>
+    </div>
+
+  </main>
 </div>
 
 </body>

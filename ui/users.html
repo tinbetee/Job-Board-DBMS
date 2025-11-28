@@ -1,42 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Users</title>
+  <meta charset="UTF-8">
+  <title>Users - Career Portal</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav>
-  <a href="dashboard.html">Dashboard</a>
-  <a href="jobs.html">Jobs</a>
-  <a href="applications.html">Applications</a>
-  <a href="users.html">Users</a>
-  <a href="reports.html">Reports</a>
-  <a href="index.html">Logout</a>
-</nav>
+<div class="app-layout">
 
-<div class="container">
-  <h1>Users</h1>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Career Portal</h2>
 
-  <a href="register.html"><button>Register New User</button></a>
+    <div class="nav-section-title">Main</div>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="applications.html">Applications</a></li>
+    </ul>
 
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Role</th>
-    </tr>
-    <tr>
-      <td>Admin Account</td>
-      <td>admin@example.com</td>
-      <td>Admin</td>
-    </tr>
-    <tr>
-      <td>Sarah Patel</td>
-      <td>sarah@example.com</td>
-      <td>Recruiter</td>
-    </tr>
-  </table>
+    <div class="nav-section-title">Administration</div>
+    <ul class="nav-links">
+      <li><a class="active" href="users.html">Users</a></li>
+      <li><a href="reports.html">Reports</a></li>
+    </ul>
+
+    <div class="nav-section-title">Session</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Logout</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <header class="main-header">
+      <h1>Manage Users</h1>
+      <div class="header-right">Add, modify, or deactivate staff accounts</div>
+    </header>
+
+    <a href="register.html" class="btn btn-primary">Register New User</a>
+
+    <div class="table-wrapper" style="margin-top:20px;">
+      <h3>Existing Users</h3>
+
+      <table>
+        <tr>
+          <th>User ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+
+        <tr>
+          <td>U001</td>
+          <td>Admin Account</td>
+          <td>admin@example.com</td>
+          <td>Administrator</td>
+          <td><span class="badge badge-success">Active</span></td>
+          <td>
+            <button class="btn btn-secondary">Edit</button>
+            <button class="btn btn-outline">Disable</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>U002</td>
+          <td>Sarah Patel</td>
+          <td>sarah.patel@example.com</td>
+          <td>Recruiter</td>
+          <td><span class="badge badge-success">Active</span></td>
+          <td>
+            <button class="btn btn-secondary">Edit</button>
+            <button class="btn btn-outline">Disable</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>U003</td>
+          <td>Michael Wong</td>
+          <td>m.wong@example.com</td>
+          <td>Hiring Manager</td>
+          <td><span class="badge badge-warning">Disabled</span></td>
+          <td>
+            <button class="btn btn-secondary">Enable</button>
+            <button class="btn btn-outline">Delete</button>
+          </td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </main>
 </div>
 
 </body>
